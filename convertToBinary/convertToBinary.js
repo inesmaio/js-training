@@ -1,9 +1,9 @@
-function gap(num){
+function gap(){
+    const num = process.argv[2];
     let binary = [];
     let dividend = num;
     let remainder = 0;
     let binaryLenArr = [];
-    let binaryArr = [];
     let binLen = 0;
     while (dividend >= 2) {
         remainder = dividend % 2;
@@ -24,6 +24,6 @@ function gap(num){
         binaryLenArr.push(binary[i].length)
     }
     return Math.max(...binaryLenArr);
+    
  }
-
-console.log(gap(3000))
+ console.log(gap())
