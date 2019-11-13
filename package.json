@@ -1,0 +1,14 @@
+{
+  "name": "js-training",
+  "version": "1.0.0",
+  "description": "js-training",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "imaio",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
