@@ -1,7 +1,10 @@
-const { inputValidation } = require('./validations');
+const { gap } = require('./convertToBinary');
 
 
-const userInput = process.argv[2];
+const userInput = Number(process.argv[2]);
 
-console.log(inputValidation(userInput));
+
+const result = gap(userInput)
+
+console.log(result);
 

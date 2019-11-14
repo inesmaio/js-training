@@ -1,4 +1,5 @@
 const { convertToBin } = require("../utils/binary")
+const { inputValidation } = require("./validations")
 
 // discard 0's that're not between 1's  
 const discardZeros = (binary) => {
@@ -22,6 +23,7 @@ function gap(input) {
     let binaryLenArr = [];
 
     // Operations
+    inputValidation(input);
     let binResult = convertToBin(input);
     let discResult = discardZeros(binResult);
     let zeroResult = zeroArr(discResult);
