@@ -4,11 +4,17 @@
   "description": "js-training",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --fix ./"
   },
   "author": "imaio",
   "license": "ISC",
   "dependencies": {
     "jest": "^24.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }

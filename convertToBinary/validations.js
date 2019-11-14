@@ -1,12 +1,15 @@
-const inputValidation = (input) => {
-    try{
-        if (isNaN(input) || input < 1 || !Number.isInteger(input)){
-            throw "invalidInput";
-        } 
-    } catch {
-        throw ("Insert a Positive Number")
-    }
-}
-module.exports = { 
-    inputValidation 
-}
+const valInput = (input) => {
+  if (isNaN(input)) {
+    throw new Error('Please insert a number');
+  }
+  if (input < 1) {
+    throw new Error('Please insert a number bigger than 0');
+  }
+  if (!Number.isInteger(input)) {
+    throw new Error('Please insert an integer');
+  }
+};
+
+module.exports = {
+  valInput,
+};
