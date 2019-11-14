@@ -30,7 +30,6 @@ function gap(input) {
   for (let i = 0; i < zeroResult.length; i++) {
     binaryLenArr.push(zeroResult[i].length);
   }
-
   return Math.max(...binaryLenArr);
 }
 
