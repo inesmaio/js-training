@@ -1,12 +1,14 @@
+const { InputError } = require('../utils/errors');
+
 const valInput = (input) => {
-  if (isNaN(input)) {
-    throw new Error('Please insert a number');
+  if (Number.isNaN(Number(input))) {
+    throw new InputError('Please insert a number');
   }
   if (input < 1) {
-    throw new Error('Please insert a number bigger than 0');
+    throw new InputError('Please insert a number bigger than 0');
   }
   if (!Number.isInteger(input)) {
-    throw new Error('Please insert an integer');
+    throw new InputError('Please insert an integer');
   }
 };
 
