@@ -15,9 +15,10 @@ const morseCodeToWords = (arr) => {
   arr.map((elem) => {
     elem.forEach((element) => {
       const morse = element;
-      result += morseKeys.find((element) => morseCode[element] === morse);
+      result += morseKeys.find((val) => morseCode[val] === morse);
+      return result;
     });
-    result = `${result} `;
+    return result += ' ';
   });
   return result;
 };
