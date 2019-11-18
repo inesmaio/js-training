@@ -15,8 +15,10 @@ const wordsToMorseCode = (arr) => {
     elem.forEach((element) => {
       const letter = element;
       result = `${result + morseCode[letter]} `;
+      return result;
     });
     result = `${result}   `;
+    return result;
   });
   return result;
 };

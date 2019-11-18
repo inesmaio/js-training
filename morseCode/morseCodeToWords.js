@@ -18,7 +18,8 @@ const morseCodeToWords = (arr) => {
       result += morseKeys.find((val) => morseCode[val] === morse);
       return result;
     });
-    return result += ' ';
+    result += ' ';
+    return result;
   });
   return result;
 };
