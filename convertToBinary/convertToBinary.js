@@ -12,9 +12,9 @@ const discardZeros = (binary) => {
 };
 // create an array of 0s
 const zeroArr = (binary) => {
-  binary = binary.join('');
-  binary = binary.split('1');
-  return binary;
+  const newBinary = binary.join('');
+  const noZeroArr = newBinary.split('1');
+  return noZeroArr;
 };
 
 function gap(input) {
