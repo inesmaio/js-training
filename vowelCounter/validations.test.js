@@ -7,9 +7,9 @@ test('Input: olá', () => {
   }
   expect(notAnError).not.toThrowError();
 });
-test('Input: *clarinha*', () => {
+test('Input: *hello*', () => {
   function notAnError() {
-    inputVal('*clarinha*');
+    inputVal('*hello*');
   }
   expect(notAnError).not.toThrowError();
 });
@@ -19,15 +19,15 @@ test('Input: 2017', () => {
   }
   expect(anError).toThrowError(new InputError('Characters only'));
 });
-test('Input: Bernardo', () => {
+test('Input: John', () => {
   function anError() {
-    inputVal('Bernardo');
+    inputVal('John');
   }
   expect(anError).toThrowError(new InputError('Lowercase characters only'));
 });
-test('Input: In3s', () => {
+test('Input: C4rs', () => {
   function anError() {
-    inputVal('In3s');
+    inputVal('C4rs');
   }
   expect(anError).toThrowError(new InputError('Lowercase characters only'));
 });
