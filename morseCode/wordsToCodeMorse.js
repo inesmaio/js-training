@@ -17,7 +17,7 @@ const wordsToMorseCode = (arr) => {
       result = `${result + morseCode[letter]} `;
       return result;
     });
-    result = `${result}   `;
+    result += '  ';
     return result;
   });
   return result;
