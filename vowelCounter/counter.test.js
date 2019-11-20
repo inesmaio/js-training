@@ -1,9 +1,9 @@
 const { getCount } = require('./counter');
 
-test('Count vowels of: Ines', () => {
-  expect(getCount('Ines')).toBe(2);
+test('Count vowels of: Aurora', () => {
+  expect(getCount('Aurora')).toBe(2);
 });
-test('Count vowels of: bernardo', () => {
+test('Count vowels of: john', () => {
   expect(getCount('john')).toBe(1);
 });
 test('Count vowels of: c4rs', () => {
