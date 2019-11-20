@@ -12,7 +12,7 @@ test('Count vowels of: c4rs', () => {
 test('Count vowels of: Ca1o', () => {
   expect(getCount('Ca1o')).toBe(2);
 });
-test('Count vowels of: Clara Maio Cotrim', () => {
+test('Count vowels of: John Doe', () => {
   expect(getCount('John Doe')).toBe(3);
 });
 test('Count vowels of: Blbl', () => {
