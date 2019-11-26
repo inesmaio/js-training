@@ -9,17 +9,12 @@ const arrWordsToCodeMorse = (input) => {
 };
 
 // Decode input into morseCode
+
 const wordsToMorseCode = (arr) => {
-  let result = [];
-  arr.map((elem) => {
-    elem.forEach((element) => {
-      const letter = element;
-      result = `${result + morseCode[letter]} `;
-      return result;
-    });
-    result += '  ';
-    return result;
-  });
+  const result = arr.reduce((wordAcc, element) => {
+    const word = element.reduce((letterAcc, val) => `${letterAcc}${morseCode[val]} `, '');
+    return `${wordAcc}${word}  `;
+  }, '');
   return result;
 };
 

@@ -2,26 +2,20 @@ const { morseCode } = require('../utils/variables');
 
 // Transform the input into an Array
 const arrMorseCodeToWords = (input) => {
-  const SEPARATOR = '   ';
-  const inputArr = input.split(SEPARATOR);
-  const coderMorseArr = inputArr.map((element) => (element.split(' ')));
-  return coderMorseArr;
+  const WORD_SEPARATOR = '   ';
+  const LETTER_SEPARATOR = ' ';
+  const inputArr = input.split(WORD_SEPARATOR).map((element) => (element.split(LETTER_SEPARATOR)));
+  return inputArr;
 };
 
 // Transform Morse code into words
 const morseCodeToWords = (arr) => {
-  let result = [];
-  const morseKeys = Object.keys(morseCode);
-  arr.map((elem) => {
-    elem.forEach((element) => {
-      const morse = element;
-      result += morseKeys.find((val) => morseCode[val] === morse);
-      return result;
-    });
-    result += ' ';
-    return result;
-  });
-  return result;
+  const MORSEKEYS = Object.keys(morseCode);
+  const codeWord = arr.reduce((codeWordAcc, elem) => {
+    const codeLetter = elem.reduce((codeLetterAcc, val) => `${codeLetterAcc}${MORSEKEYS.find((key) => morseCode[key] === val)}`, '');
+    return `${codeWordAcc}${codeLetter} `;
+  }, '');
+  return codeWord;
 };
 
 // Operations

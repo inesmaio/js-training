@@ -58,9 +58,9 @@ const morseCode = {
 };
 
 // Regex for all alphanumeric characters
-const letters = /[A-Za-z\d!@#$%^&*(),.?":{}|<>]/gm;
+const LETTERS = /[A-Za-z\d!@#$%^&*(),?:{}|<>]/gm;
 
 module.exports = {
   morseCode,
-  letters,
+  LETTERS,
 };

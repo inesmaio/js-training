@@ -1,20 +1,20 @@
-const { wordsToMCResult } = require('./wordsToCodeMorse');
-const { mCTWordsResult } = require('./morseCodeToWords');
 const { InputError } = require('../utils/errors');
-const { letters } = require('../utils/variables');
+const { LETTERS } = require('../utils/variables');
 
 
-const inputValidation = (userInput) => {
-  const regex = /[.-]/gm;
-  const input = userInput.toLowerCase();
-  if (userInput.search(regex) >= 0) {
-    if (userInput.search(letters) >= 0) {
+const inputValidation = (input) => {
+  let validation;
+  const REGEX = /[.-]/gm;
+  if (input.search(REGEX) >= 0) {
+    if (input.search(LETTERS) >= 0) {
       throw new InputError('Insert a valid Morse Code. No letter or numbers allowed.');
     } else {
-      return mCTWordsResult(input);
+      validation = true;
+      return validation;
     }
   } else {
-    return wordsToMCResult(input);
+    validation = false
+    return validation;
   }
 };
 

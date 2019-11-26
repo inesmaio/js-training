@@ -1,16 +1,19 @@
 const { inputValidation } = require('./validateInput');
 
-test("Input 'i love you' should return '..   .-.. --- ...- .   -.-- --- ..-'", () => {
-  expect(inputValidation('i love you')).toBe('..   .-.. --- ...- .   -.-- --- ..-   ');
+test("Input 'i love you' should return false", () => {
+  expect(inputValidation('i love you')).toBe(false);
 });
-test("Input '1 l0ve you' should return '.----   .-.. ----- ...- .   -.-- --- ..- '", () => {
-  expect(inputValidation('1 l0ve you')).toBe('.----   .-.. ----- ...- .   -.-- --- ..-   ');
+test("Input '1 l0ve you' should return false", () => {
+  expect(inputValidation('1 l0ve you')).toBe(false);
 });
-test("Input 'Hello!!' should return '.... . .-.. .-.. --- -.-.-- -.-.--'", () => {
-  expect(inputValidation('Hello!!')).toBe('.... . .-.. .-.. --- -.-.-- -.-.--   ');
+test("Input 'Hello!!' should return false", () => {
+  expect(inputValidation('Hello!!')).toBe(false);
 });
 test("Input 'i' should return '..", () => {
-  expect(inputValidation('i')).toBe('..   ');
+  expect(inputValidation('i')).toBe(false);
+});
+test("Input '..   .-.. --- ...- .   -.-- --- ..-' should return true", () => {
+  expect(inputValidation('..   .-.. --- ...- .   -.-- --- ..-')).toBe(true);
 });
 
 test("Input: '.... .-.. -.-43-- -.-.' should return an InputError", () => {
